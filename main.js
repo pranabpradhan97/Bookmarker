@@ -1,6 +1,6 @@
 document.getElementById("myForm").addEventListener("submit", saveBookmark);
 
-function saveBookmark(e)
+const saveBookmark = (e) =>
 {
 	var siteName=document.getElementById("siteName").value;
 	var siteUrl=document.getElementById("siteUrl").value;
@@ -76,7 +76,7 @@ function saveBookmark(e)
 
 
 
-function fetchBookmarks()
+const fetchBookmarks = () =>
 {
 	//get bookmarks from localstorage
 	var bookmarks=JSON.parse(localStorage.getItem('bookmarks'));
